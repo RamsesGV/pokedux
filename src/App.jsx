@@ -4,7 +4,7 @@ import Searcher from './components/Searcher/Searcher'
 import PokemonList from './components/PokemonList/PokemonList'
 import logo from './statics/logo.svg'
 import { useEffect, useState } from 'react'
-import { getPokemons } from './api'
+import { getPokemon } from './api'
 
 
 
@@ -13,7 +13,7 @@ const [pokemons, setPokemons] = useState([])
 
   useEffect(() => { 
     const fetchPokemons = async () =>  {
-      const pokemonsRes = await getPokemons()
+      const pokemonsRes = await getPokemon()
       setPokemons(pokemonsRes)
     };
       fetchPokemons()

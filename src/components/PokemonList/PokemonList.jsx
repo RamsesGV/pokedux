@@ -1,18 +1,17 @@
-import PokemonCard from "../PokemonCard/PokemonCard";
-import './PokemonList.css'
+import PokemonCard from '../PokemonCard/PokemonCard';
 
-const PokemonList = ({pokemons}) => { 
-return(
-<div className="PokemonList" >
-    {pokemons.map((pokemon) => { 
-        return <PokemonCard name={pokemon.name} key={pokemon.name}/>
-    })}
-</div>
-)
-}
+const PokemonList = ({ pokemons }) => {
+  return (
+    <div className='PokemonList'>
+      {pokemons.map((pokemon) => {
+        return <PokemonCard name={pokemon.name} key={pokemon.name} />;
+      })}
+    </div>
+  );
+};
 
-PokemonList.defaultProps = { 
-    pokemons:Array(12).fill('')
-}
+PokemonList.defaultProps = {
+  pokemons: Array(10).fill(''),
+};
 
-export default PokemonList
+export default PokemonList;
